@@ -1,11 +1,10 @@
 <template>
   <div id="app">
     <header>
-      <span>Vue.js PWA</span>
+      <span>Structure and interpretation of programming languages: a gallery</span>
     </header>
     <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
+      <router-view />
     </main>
   </div>
 </template>
