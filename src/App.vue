@@ -1,12 +1,19 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Structure and interpretation of programming languages: a gallery</span>
-    </header>
-    <main>
-      <router-view />
-    </main>
-  </div>
+  <md-app>
+    <md-app-toolbar class="md-large md-primary">
+      <div class="md-toolbar-section-end">
+        SICP: Programming exercises
+      </div>
+      <div class="md-toolbar-row">
+        <span class="md-display-1">Gallery</span>
+      </div>
+    </md-app-toolbar>
+    <md-app-content>
+      <main>
+        <router-view />
+      </main>
+    </md-app-content>
+  </md-app>
 </template>
 
 <script>
@@ -14,40 +21,3 @@ export default {
   name: 'app'
 }
 </script>
-
-<style>
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
-}
-</style>

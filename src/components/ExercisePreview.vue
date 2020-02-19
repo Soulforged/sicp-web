@@ -1,8 +1,12 @@
 <template>
-  <div class="exercise preview">
-    <h4>{{title}}</h4>
-    <p>{{description}}</p>
-  </div>
+  <md-card class="exercise preview">
+    <md-card-header>{{title}}</md-card-header>
+    <md-card-content>{{description}}</md-card-content>
+    <md-card-actions>
+      <md-button>Try it</md-button>
+      <md-button>Solve it</md-button>
+    </md-card-actions>
+  </md-card>
 </template>
 
 <script>

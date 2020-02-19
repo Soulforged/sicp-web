@@ -1,6 +1,12 @@
 <template>
-  <div class="home">
-    <exercise-preview v-for="exercise in exercises" v-bind="exercise" v-bind:key="exercise.id" />
+  <div class="md-layout home">
+    <div 
+      v-for="exercise in exercises" 
+      v-bind:key="exercise.id" 
+      class="md-layout-item"
+    >
+      <exercise-preview v-bind="exercise" class="md-elevation-2" />
+    </div>
   </div>
 </template>
 
