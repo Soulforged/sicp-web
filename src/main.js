@@ -7,6 +7,7 @@ import 'vue-material/dist/theme/default.css'
 import App from './App'
 import router from './router'
 import './registerServiceWorker'
+import { createProvider } from './vue-apollo'
 
 Vue.config.productionTip = false
 
@@ -15,6 +16,7 @@ Vue.use(VueMaterial)
 /* eslint-disable no-new */
 new Vue({
   router,
-  render: h => h(App),
+  apolloProvider: createProvider(),
+  render: h => h(App)
 }).$mount('#app')
 
