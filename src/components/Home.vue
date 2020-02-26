@@ -3,9 +3,11 @@
     <div 
       v-for="exercise in exercises" 
       v-bind:key="exercise.id" 
-      class="md-layout-item"
+      class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100"
     >
-      <exercise-preview v-bind="exercise" class="md-elevation-2" />
+      <router-link to="/exercises/1" exact>
+        <exercise-preview v-bind="exercise" />
+      </router-link>
     </div>
   </div>
 </template>
@@ -21,6 +23,7 @@ export default {
       exercises {
         id
         name
+        title
         description
       }
     }`
@@ -30,3 +33,13 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss">
+@import "~vue-material/dist/theme/engine";
+.md-layout-item {
+  margin-bottom: 1rem;
+  .md-card {
+    height: 12rem;
+  }
+}
+</style>
