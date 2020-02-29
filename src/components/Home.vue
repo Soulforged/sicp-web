@@ -5,7 +5,7 @@
       v-bind:key="exercise.id" 
       class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100"
     >
-      <router-link to="/exercises/1" exact>
+      <router-link v-bind:to="`/exercises/${exercise.id}`" exact>
         <exercise-preview v-bind="exercise" />
       </router-link>
     </div>
